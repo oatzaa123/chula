@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  background-image: url("./assets/images/Group 101@3X.png");
-}
+// body {
+//   background-image: url("./assets/images/Group 101@3X.png");
+// }
 </style>
