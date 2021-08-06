@@ -1,37 +1,18 @@
 <template>
-    <img
-        class="animation-img"
-        :src="require('./assets/images/clouds/cloud_PNG29@2X.png')"
-    />
+  <router-view></router-view>
 </template>
 
 <script>
 // import { ref } from 'vue'
 export default {
-    name: 'App',
-    components: {},
-    setup() {},
-}
+  name: "App",
+  components: {},
+  setup() {},
+};
 </script>
 
 <style lang="scss">
 body {
-    background-image: url('./assets/images/Group 101@3X.png');
-}
-.animation-img {
-    opacity: 0.3;
-    animation: cloud 10s infinite;
-}
-
-@keyframes cloud {
-    0% {
-        transform: translate(0px);
-    }
-    90% {
-        transform: translate(400px);
-    }
-    100% {
-        transform: translate(500px);
-    }
+  background-image: url("./assets/images/Group 101@3X.png");
 }
 </style>
