@@ -3,18 +3,27 @@ import Home from './../pages/Home.vue'
 
 const routes = [
     {
-        path: '/Home',
-        name: 'Home',
-        component: Home,
-    },
-    {
-        path: '',
-        component: () =>
-            import(/* webpackChunkName: "Main" */ '../layouts/Main.vue'),
+        path: '/',
+        component: () => import('../layouts/Main.vue'),
         children: [
             {
                 path: '/',
-                redirect: '/',
+                redirect: '/Home',
+            },
+            {
+                path: '/Home',
+                name: 'Home',
+                component: Home,
+            },
+        ],
+    },
+    {
+        path: '/',
+        component: () => import('../layouts/Default.vue'),
+        children: [
+            {
+                path: '/',
+                redirect: '/Home',
             },
             {
                 path: '/About',
