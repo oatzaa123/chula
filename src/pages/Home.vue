@@ -14,17 +14,6 @@
           </div>
         </div>
         <div class="right">
-          <!-- <router-link :to="{ path: '/home' }">
-            <div class="active">Home</div>
-          </router-link>
-          <div>Gallery</div>
-          <div>WorkShop</div>
-          <div>News</div>
-          <div>About</div>
-          <div>Contact</div> -->
-          <!-- <router-link :v-for="item in Menu" :key="item.key">
-            <div>{{ item.name }}</div>
-          </router-link> -->
           <router-link
             :to="{ path: item.path }"
             v-for="item in Menu"
@@ -58,7 +47,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
   .section-1 {
     background-image: url("../assets/images/Group 101@3X.png");

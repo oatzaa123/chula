@@ -1,13 +1,21 @@
 <template>
-  <router-view></router-view>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
-// import { ref } from 'vue'
+import { onMounted } from "vue";
+import { useRouter } from "vue-router";
 export default {
   name: "App",
   components: {},
-  setup() {},
+  setup() {
+    const router = useRouter();
+    onMounted(() => {
+      router.replace({ name: "Home" });
+    });
+  },
 };
 </script>
 
