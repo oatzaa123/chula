@@ -133,11 +133,11 @@ export default {
       width: 100%;
       height: 100%;
       overflow: hidden;
-      :before {
+      &::before {
         right: 100%;
       }
-      :before,
-      :after {
+      &::before,
+      &::after {
         opacity: 0.3;
         content: "";
         position: absolute;
