@@ -12,19 +12,15 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 export default {
     setup() {
-        const Menu = ref([
-            { name: 'Home', path: '/' },
-            { name: 'Gallery', path: '/Gallery' },
-            { name: 'WorkShop', path: '/WorkShop' },
-            { name: 'News', path: '/News' },
-            { name: 'About', path: '/About' },
-            { name: 'Contact', path: '/Contact' },
-        ])
+        const store = useStore()
 
-        return { Menu }
+        return {
+            Menu: computed(() => store.getters['showMenuList']),
+        }
     },
 }
 </script>
@@ -32,22 +28,23 @@ export default {
 <style lang="scss" scoped>
 .right {
     width: 35%;
-  line-height: 1.75;
-  font-size: 1rem;
-  opacity: 0;
-  height: 0px;
-  overflow: hidden;
-  transition: opacity 1s, height 1s;
-  &.show {
-    opacity: 1;
-    height: auto;
-    overflow: unset;
-  }
-  .menu-link {
-    color: #707070;
-    text-decoration: unset;
-    &.router-link-active {
-      color: #ffffff;
+    line-height: 1.75;
+    font-size: 1rem;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: opacity 1s, height 1s;
+    &.show {
+        opacity: 1;
+        height: auto;
+        overflow: unset;
+    }
+    .menu-link {
+        color: #707070;
+        text-decoration: unset;
+        &.router-link-active {
+            color: #ffffff;
+        }
     }
 }
 </style>

@@ -2,7 +2,7 @@
     <div class="default">
         <div class="menu" @click="showMenu">
             <img :src="require('../assets/images/MENU@1X.png')" />
-            <Menu :class="{ show: state.show }" />
+            <Menu :class="{ show: state.show }" class="mt-3" />
         </div>
         <router-view />
     </div>
