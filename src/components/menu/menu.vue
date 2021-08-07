@@ -1,5 +1,5 @@
 <template>
-    <div :class="[customClass ? customClass : right]">
+    <div class="right">
         <router-link
             :to="{ path: item.path }"
             v-for="item in Menu"
@@ -14,7 +14,7 @@
 <script>
 import { ref } from 'vue'
 export default {
-    setup(props) {
+    setup() {
         const Menu = ref([
             { name: 'Home', path: '/' },
             { name: 'Gallery', path: '/Gallery' },
@@ -35,7 +35,7 @@ export default {
     line-height: 1.75;
     font-size: 1rem;
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 1s;
     &.show {
         opacity: 1;
     }
