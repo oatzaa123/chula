@@ -15,8 +15,8 @@ export default {
 </script>
 
 <style lang="scss">
-.main {
-    background-color: #030124;
-    padding-bottom: 100px;
-}
+// .main {
+//     background-color: #030124;
+//     padding-bottom: 100px;
+// }
 </style>
