@@ -1,0 +1,122 @@
+.home {
+  .section-1 {
+    background-image: url("../assets/images/home/section1/BACKGROUND@1X.png");
+    min-height: 500px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    &.bgnight {
+      background-image: url("../assets/images/Group 101@3X.png");
+    }
+    .logo-block {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      .left {
+        width: 65%;
+        line-height: 1;
+        text-align: right;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: stretch;
+        margin-right: 20px;
+        .logo {
+          margin-right: 15px;
+          .main {
+            font-size: 5rem;
+          }
+          .sub {
+            font-size: 1.5rem;
+          }
+        }
+        .toggle {
+          text-align: left;
+          .day {
+            transition: font-size 1s;
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            margin-top: 6px;
+            &.active {
+              font-size: 4rem;
+              text-decoration: underline;
+              margin-bottom: 10px;
+              margin-top: 5px;
+            }
+          }
+          .night {
+            font-size: 1.6rem;
+            $color: #e17cff;
+            color: $color;
+            transition: font-size 1s;
+            text-shadow: 0px 0px 10px $color;
+            &.active {
+              font-size: 2.5rem;
+              text-decoration-color: $color;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .right {
+        width: 35%;
+        line-height: 1.55;
+        font-size: 0.75rem;
+        .menu-link {
+          color: #8d8c9a;
+          text-decoration: unset;
+          font-weight: 500;
+          &.router-link-active {
+            color: #ffffff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .lang {
+      margin: 0 5px;
+      text-align: right;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .animation-cloud {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      &::before {
+        right: 100%;
+      }
+      &::before,
+      &::after {
+        opacity: 0.3;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/clouds/cloud_PNG29@2X.png");
+        background-size: 100%;
+        animation: cloud 60s infinite linear;
+      }
+    }
+
+    @keyframes cloud {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(100%);
+      }
+    }
+  }
+}
