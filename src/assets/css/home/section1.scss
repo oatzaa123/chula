@@ -1,7 +1,7 @@
 .home {
     .section-1 {
         background-image: url('../../assets/images/home/section1/BACKGROUND@1X.png');
-        min-height: 500px;
+        min-height: 700px;
         width: 100%;
         position: relative;
         display: inline-block;
@@ -88,62 +88,62 @@
                         }
                     }
                 }
-                .right {
-                    width: 35%;
-                    line-height: 1.55;
-                    font-family: 'Kanit-Medium';
-                    font-size: 17px;
-                    margin-top: 15px;
-                    .menu-link {
-                        color: rgba(255, 255, 255, 0.5);
-                        text-decoration: unset;
-                        &.router-link-active {
-                            color: rgba(255, 255, 255, 1);
-                            opacity: 1;
-                        }
+            }
+            .right {
+                width: 35%;
+                line-height: 1.55;
+                font-family: 'Kanit-Medium';
+                font-size: 17px;
+                margin-top: 15px;
+                .menu-link {
+                    color: rgba(255, 255, 255, 0.5);
+                    text-decoration: unset;
+                    &.router-link-active {
+                        color: rgba(255, 255, 255, 1);
+                        opacity: 1;
                     }
                 }
-                &.night .right .menu-link {
-                    color: #8d8c9a;
-                }
             }
-
-            .lang {
-                font-family: 'Kanit-Medium';
-                margin: 5px 15px 0px 0px;
-                text-align: right;
-                color: #ffffff;
-                cursor: pointer;
+            &.night .right .menu-link {
+                color: #8d8c9a;
             }
+        }
 
-            .animation-cloud {
+        .lang {
+            font-family: 'Kanit-Medium';
+            margin: 5px 15px 0px 0px;
+            text-align: right;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .animation-cloud {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            &::before {
+                right: 100%;
+            }
+            &::before,
+            &::after {
+                opacity: 0.3;
+                content: '';
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                overflow: hidden;
-                &::before {
-                    right: 100%;
-                }
-                &::before,
-                &::after {
-                    opacity: 0.3;
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url('../../assets/images/clouds/cloud_PNG29@2X.png');
-                    background-size: 100%;
-                    animation: cloud 60s infinite linear;
-                }
+                background-image: url('../../assets/images/clouds/cloud_PNG29@2X.png');
+                background-size: 100%;
+                animation: cloud 60s infinite linear;
             }
+        }
 
-            @keyframes cloud {
-                from {
-                    transform: translateX(0%);
-                }
-                to {
-                    transform: translateX(100%);
-                }
+        @keyframes cloud {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(100%);
             }
         }
     }

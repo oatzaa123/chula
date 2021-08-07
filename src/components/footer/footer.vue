@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <div class="footer-content">
+        <div class="footer-body">
             <div class="vego">
                 <img
                     :src="
@@ -8,24 +8,26 @@
                     "
                 />
             </div>
-            <div class="content">
-                <p style="color: white">
-                    พบกับประสบการณ์ใหม่ในการรับชม <br />
-                    Chula digital day & night ในรูปแบบ AR <br />
-                    และ VR ผ่านแอปพลิเคชันบนมือถือได้เร็วๆนี้
-                </p>
-            </div>
-            <div class="button">
-                <div style="position: relative">
-                    <button
-                        type="button"
-                        class="btn btn-outline-primary customButton"
-                    >
-                        <b>Let's Go</b>
-                    </button>
+            <div class="footer-content">
+                <div class="content">
+                    <p style="color: white">
+                        พบกับประสบการณ์ใหม่ในการรับชม <br />
+                        Chula digital day & night ในรูปแบบ AR <br />
+                        และ VR ผ่านแอปพลิเคชันบนมือถือได้เร็วๆนี้
+                    </p>
                 </div>
-                <hr />
+                <div class="button">
+                    <div style="position: relative">
+                        <button
+                            type="button"
+                            class="btn btn-outline-primary customButton"
+                        >
+                            <b>Let's Go</b>
+                        </button>
+                    </div>
+                </div>
             </div>
+            <!-- <div class="contact"></div> -->
         </div>
     </div>
 </template>
@@ -39,24 +41,33 @@ export default {}
     background-image: url('../../assets/images/home/footer/ve3X.png');
     min-height: 900px;
     position: relative;
+    .footer-body {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        right: 25%;
+        .footer-content {
+            margin-left: 25px;
+        }
+    }
 }
-.footer-content {
-}
-.vego {
-    position: absolute;
-    top: 80%;
-    right: 40%;
-}
-.content {
-    position: absolute;
-    top: 80%;
-    right: 20%;
-}
-.button {
-    position: absolute;
-    bottom: 5%;
-    right: 25%;
-}
+
+// .vego {
+//     position: absolute;
+//     top: 80%;
+//     right: 40%;
+// }
+// .content {
+//     position: absolute;
+//     top: 80%;
+//     right: 20%;
+// }
+// .button {
+//     position: absolute;
+//     bottom: 5%;
+//     right: 25%;
+// }
 .customButton {
     border-radius: 20px;
     width: 200px;
