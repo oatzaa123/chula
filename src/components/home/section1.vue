@@ -5,7 +5,7 @@
       <div class="logo-block">
         <div class="left">
           <div class="logo">
-            <div class="main">CHULA</div>
+            <div class="title">CHULA</div>
             <div class="sub">DIGITAL ARTS PARK</div>
           </div>
           <div class="toggle" :class="{ day: !isNight, night: isNight }">
@@ -16,6 +16,7 @@
             >
               DAY
             </div>
+            <div class="n">&</div>
             <div
               class="night"
               :class="{ active: isNight }"
@@ -47,9 +48,8 @@ export default {
     return {
       isNight: false,
       Menu: [
-        { name: "Menu", path: "/Home", active: true },
+        { name: "Menu", path: "/Home" },
         { name: "Gallery", path: "/Gallery" },
-        { name: "WorkShop", path: "/WorkShop" },
         { name: "WorkShop", path: "/WorkShop" },
         { name: "News", path: "/News" },
         { name: "About", path: "/About" },
