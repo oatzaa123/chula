@@ -35,8 +35,8 @@ export default {
     line-height: 1.75;
     font-size: 1rem;
     opacity: 0;
+    transition: opacity 2s;
     &.show {
-        transition: opacity 2s;
         opacity: 1;
     }
     .menu-link {
