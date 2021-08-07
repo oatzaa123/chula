@@ -15,7 +15,8 @@ export default {
 </script>
 
 <style lang="scss">
-// .main {
-//     background-image: url('../assets/images/Group 101@3X.png');
-// }
+.main {
+    background-color: #000000;
+    padding-bottom: 100px;
+}
 </style>

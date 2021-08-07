@@ -1,26 +1,30 @@
 <template>
     <div class="footer">
-        <div class="vego">
-            <img
-                :src="
-                    require('../../assets/images/home/footer/Group 90@2X.png')
-                "
-            />
-        </div>
-        <div class="content">
-            <p style="color: white">
-                พบกับประสบการณ์ใหม่ในการรับชม <br />
-                Chula digital day & night ในรูปแบบ AR <br />
-                และ VR ผ่านแอปพลิเคชันบนมือถือได้เร็วๆนี้
-            </p>
-        </div>
-        <div class="button">
-            <div style="position: relative">
+        <div class="footer-content">
+            <div class="vego">
                 <img
                     :src="
-                        require('../../assets/images/home/footer/Rectangle 46@2X.png')
+                        require('../../assets/images/home/footer/Group 90@2X.png')
                     "
                 />
+            </div>
+            <div class="content">
+                <p style="color: white">
+                    พบกับประสบการณ์ใหม่ในการรับชม <br />
+                    Chula digital day & night ในรูปแบบ AR <br />
+                    และ VR ผ่านแอปพลิเคชันบนมือถือได้เร็วๆนี้
+                </p>
+            </div>
+            <div class="button">
+                <div style="position: relative">
+                    <button
+                        type="button"
+                        class="btn btn-outline-primary customButton"
+                    >
+                        <b>Let's Go</b>
+                    </button>
+                </div>
+                <hr />
             </div>
         </div>
     </div>
@@ -36,6 +40,8 @@ export default {}
     min-height: 900px;
     position: relative;
 }
+.footer-content {
+}
 .vego {
     position: absolute;
     top: 80%;
@@ -50,5 +56,12 @@ export default {}
     position: absolute;
     bottom: 5%;
     right: 25%;
+}
+.customButton {
+    border-radius: 20px;
+    width: 200px;
+}
+hr {
+    color: #fff;
 }
 </style>
