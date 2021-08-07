@@ -30,19 +30,19 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
-    data() {
-        return {
-            Menu: [
-                { name: 'Menu', path: '/' },
-                { name: 'Gallery', path: '/Gallery' },
-                { name: 'WorkShop', path: '/WorkShop' },
-                { name: 'WorkShop', path: '/WorkShop' },
-                { name: 'News', path: '/News' },
-                { name: 'About', path: '/About' },
-                { name: 'Contact', path: '/Contact' },
-            ],
-        }
+    setup() {
+        const Menu = ref([
+            { name: 'Menu', path: '/' },
+            { name: 'Gallery', path: '/Gallery' },
+            { name: 'WorkShop', path: '/WorkShop' },
+            { name: 'News', path: '/News' },
+            { name: 'About', path: '/About' },
+            { name: 'Contact', path: '/Contact' },
+        ])
+
+        return { Menu }
     },
 }
 </script>
