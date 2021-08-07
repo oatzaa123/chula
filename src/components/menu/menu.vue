@@ -32,19 +32,22 @@ export default {
 <style lang="scss" scoped>
 .right {
     width: 35%;
-    line-height: 1.75;
-    font-size: 1rem;
-    opacity: 0;
-    transition: opacity 1s;
-    &.show {
-        opacity: 1;
-    }
-    .menu-link {
-        color: #707070;
-        text-decoration: unset;
-        &.router-link-active {
-            color: #ffffff;
-        }
+  line-height: 1.75;
+  font-size: 1rem;
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: opacity 1s, height 1s;
+  &.show {
+    opacity: 1;
+    height: auto;
+    overflow: unset;
+  }
+  .menu-link {
+    color: #707070;
+    text-decoration: unset;
+    &.router-link-active {
+      color: #ffffff;
     }
 }
 </style>
