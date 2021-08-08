@@ -30,8 +30,8 @@ export default {
 <style lang="scss" scoped>
 .default {
     padding: 1.5rem;
-    background-image: url('../assets/images/BACKGROUND@2X.png');
-    min-height: 500px;
+    background-image: url('../assets/images/Rectangle 47.svg');
+    min-height: 100vh;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
