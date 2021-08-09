@@ -23,7 +23,6 @@ $urlImage: "../../assets/images";
       background-image: url("#{$urlImage}/clouds/cloud_PNG29@1X.png");
       background-size: 90%;
       background-repeat: no-repeat;
-      // background-position: center;
       animation: cloud 60s infinite linear;
     }
   }
@@ -313,11 +312,23 @@ $urlImage: "../../assets/images";
     }
   }
   .sub-section1 {
+    position: relative;
     img {
       display: none;
       &.active {
         display: block;
       }
+    }
+    .points {
+      position: absolute;
+      left: 50%;
+      bottom: 5%;
+      transform: translateX(-50%);
+      height: 27px;
+      width: 80%;
+      background: transparent;
+      z-index: 1;
+      margin: 10px 0;
     }
   }
 }

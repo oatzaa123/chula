@@ -54,6 +54,17 @@
         :src="require('../../assets/images/home/section1/L_DN2_20202.png')"
         style="width: 100%"
       />
+
+      <div>
+        <input
+          type="range"
+          class="points"
+          name="points"
+          min="0"
+          max="24"
+          step="1"
+        />
+      </div>
     </div>
   </div>
 </template>
