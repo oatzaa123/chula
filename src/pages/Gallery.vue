@@ -18,6 +18,7 @@
                 >
                     <img
                         :src="require('../assets/images/gallery/Image 49.svg')"
+                        width="570"
                     />
                 </div>
             </div>
@@ -62,7 +63,7 @@ export default {}
             overflow-y: auto;
             -ms-overflow-style: none; /* IE and Edge */
             scrollbar-width: none;
-            max-height: 75vh;
+            max-height: 100vh;
         }
         .content-view::-webkit-scrollbar {
             display: none;
