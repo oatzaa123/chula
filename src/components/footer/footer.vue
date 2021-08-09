@@ -99,7 +99,7 @@ export default {
       flex-direction: row;
       justify-content: flex-end;
       transform: translateX(-10%);
-      line-height: 0.9;
+      line-height: 0.8;
       flex-wrap: nowrap;
       .vego {
         display: flex;
@@ -112,11 +112,10 @@ export default {
         .vego-flip {
           font-size: 100px;
           font-family: "Kanit-Black";
-          //   text-shadow: 0 0 3px #b51bff;
           transform: scaleY(-1);
-          background: -webkit-linear-gradient(to top, #ffffff, #00000000 55%);
-          background: -moz-linear-gradient(to top, #ffffff, #00000000 55%);
-          background: linear-gradient(to top, #ffffff, #00000000 55%);
+          background: -webkit-linear-gradient(to top, #ffffff4d, #00000000 55%);
+          background: -moz-linear-gradient(to top, #ffffff4d, #00000000 55%);
+          background: linear-gradient(to top, #ffffff4d, #00000000 55%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
