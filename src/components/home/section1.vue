@@ -47,12 +47,10 @@
       <img
         :class="{ active: isNight }"
         :src="require('../../assets/images/home/section1/L_DN2N_20202.png')"
-        style="width: 100%"
       />
       <img
         :class="{ active: !isNight }"
         :src="require('../../assets/images/home/section1/L_DN2_20202.png')"
-        style="width: 100%"
       />
 
       <div>
@@ -63,6 +61,8 @@
           min="0"
           max="24"
           step="1"
+          v-model="rangeValue"
+          :style="rangeStyle"
         />
       </div>
     </div>
@@ -73,6 +73,9 @@
 export default {
   data() {
     return {
+      rangeValue: 12,
+      rangeStyle:
+        "background: linear-gradient(to right, #b51bff 0%, #b51bff 50%, #fff 50%, #fff 100%);",
       isNight: true,
       Menu: [
         { name: "Menu", path: "/Home" },
@@ -84,9 +87,29 @@ export default {
       ],
     };
   },
+  beforeMount() {
+    this.getTime();
+  },
   methods: {
+    getTime() {
+      this.rangeValue = new Date().getHours();
+      setTimeout(() => {
+        this.getTime();
+      }, 1000 * 60 * 60);
+    },
     bgToggle(boolean) {
       this.isNight = boolean;
+    },
+  },
+  watch: {
+    rangeValue() {
+      var value = ((this.rangeValue - 0) / (24 - 0)) * 100;
+      this.rangeStyle = `background: linear-gradient(to right, #b51bff 0%, #b51bff ${value}%, #fff ${value}%, #fff 100%);`;
+      if (this.rangeValue >= 12) {
+        this.isNight = false;
+      } else {
+        this.isNight = true;
+      }
     },
   },
 };
