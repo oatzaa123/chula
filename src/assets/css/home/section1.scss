@@ -3,7 +3,7 @@ $urlImage: "../../assets/images";
   display: flex;
   flex-direction: column;
   position: relative;
-
+  overflow: hidden;
   .animation-cloud {
     position: absolute;
     top: 0;

@@ -1,131 +1,169 @@
 <template>
-    <div class="footer">
-        <div class="footer-body">
-            <div
-                style="
-                    display: flex;
-                    justify-content: center;
-                    padding-bottom: 25px;
-                "
-            >
-                <div class="vego">
-                    <img
-                        :src="
-                            require('../../assets/images/home/footer/Group 90@2X.png')
-                        "
-                    />
-                </div>
-                <div class="footer-content">
-                    <div class="content">
-                        <p style="color: white">
-                            พบกับประสบการณ์ใหม่ในการรับชม <br />
-                            Chula digital day & night ในรูปแบบ AR <br />
-                            และ VR ผ่านแอปพลิเคชันบนมือถือได้เร็วๆนี้
-                        </p>
-                    </div>
-                    <div class="button">
-                        <div style="position: relative">
-                            <button
-                                type="button"
-                                class="btn btn-outline-primary customButton"
-                            >
-                                <b>Let's Go</b>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact">
-                <p style="color: white">
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; GridWhiz
-                    (Thailand) Co. Ltd. (Headquarters)
-                </p>
-                <div
-                    style="
-                        display: flex;
-                        justify-content: space-around;
-                        opacity: 0.5;
-                    "
-                >
-                    <div class="contact-content">
-                        <p>184/185 Forum Tower 28th Fl. Ratchadapisek Rd.</p>
-                        <p>Huai Khwang, Bangkok 10310</p>
-                    </div>
-                    <div class="contact-content">
-                        <!-- <br /><br /><br /> -->
-                        <p>Tel: +66 2061 9519 Fax: +66 2061 9519</p>
-                        <p>Hot-line Support Tel: +66 8 3777 8822</p>
-                    </div>
-                    <div class="contact-icon">
-                        <div v-for="(item, index) in icon" :key="index">
-                            <img class="contact-icon" :src="item.path" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="footer">
+    <div class="overlay"></div>
+    <img
+      class="footer-bg"
+      :src="require('../../assets/images/home/footer/ve3X.png')"
+    />
+    <div class="content">
+      <div class="vego-group">
+        <div class="vego">
+          <div class="vego-main">VEGO</div>
+          <div class="vego-flip">VEGO</div>
         </div>
+        <div class="description">
+          <p>
+            พบกับประสบการณ์ใหม่ในการรับชม <br />
+            Chula digital day & night ในรูปแบบ AR <br />
+            และ VR ผ่านแอปพลิเคชันบนมือถือได้เร็วๆนี้
+          </p>
+          <div class="button">
+            <button type="button" class="btn customButton">
+              <b>Let's Go</b>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="contact-group">
+          <div class="box-1">
+            <div>GridWhiz (Thailand) Co. Ltd. (Headquarters)</div>
+            <div>184/185 Forum Tower 28th Fl. Ratchadapisek Rd.</div>
+            <div>Huai Khwang, Bangkok 10310</div>
+          </div>
+          <div class="box-2">
+            <div>Tel: +66 2061 9519 Fax: +66 2061 9519</div>
+            <div>Hot-line Support Tel: +66 8 3777 8822</div>
+          </div>
+          <div class="box-3">
+            <div v-for="(item, index) in icon" :key="index">
+              <img class="contact-icon" :src="item.path" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 export default {
-    setup() {
-        const icon = ref([
-            {
-                path: require('../../assets/images/home/footer/Group 118@2X.png'),
-            },
-            {
-                path: require('../../assets/images/home/footer/Group 117@2X.png'),
-            },
-            {
-                path: require('../../assets/images/home/footer/Group 122@2X.png'),
-            },
-        ])
+  setup() {
+    const icon = ref([
+      {
+        path: require("../../assets/images/home/footer/Group 118@2X.png"),
+      },
+      {
+        path: require("../../assets/images/home/footer/Group 117@2X.png"),
+      },
+      {
+        path: require("../../assets/images/home/footer/Group 122@2X.png"),
+      },
+    ]);
 
-        return { icon }
-    },
-}
+    return { icon };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .footer {
+  position: relative;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(
-            to bottom,
-            rgba(3, 0, 36, 0) 28%,
-            rgba(7, 4, 39, 0.96) 80%,
-            rgb(7, 4, 39)
-        ),
-        url('../../assets/images/home/footer/ve3X.png') no-repeat left top;
-    min-height: 135vh;
-    position: relative;
-    .footer-body {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        .footer-content {
-            margin-left: 25px;
+      359deg,
+      #030024,
+      rgba(0, 0, 0, 0.7),
+      transparent
+    );
+    z-index: 2;
+  }
+  .footer-bg {
+    width: 100%;
+    z-index: 1;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    color: white;
+    width: 100%;
+    .vego-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      transform: translateX(-10%);
+      line-height: 0.9;
+      flex-wrap: nowrap;
+      .vego {
+        display: flex;
+        flex-direction: column;
+        .vego-main {
+          font-size: 100px;
+          font-family: "Kanit-Black";
+          text-shadow: 0 0 12px #b51bff;
         }
-        .contact {
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-            margin: 0px 50px;
-            padding-top: 20px;
-            line-height: 0.5rem;
-            margin-bottom: 100px;
-            color: rgba(255, 255, 255, 1);
-            .contact-icon {
-                display: flex;
-                margin: 0px 5px;
-            }
+        .vego-flip {
+          font-size: 100px;
+          font-family: "Kanit-Black";
+          //   text-shadow: 0 0 3px #b51bff;
+          transform: scaleY(-1);
+          background: -webkit-linear-gradient(to top, #ffffff, #00000000 55%);
+          background: -moz-linear-gradient(to top, #ffffff, #00000000 55%);
+          background: linear-gradient(to top, #ffffff, #00000000 55%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
+      }
     }
-}
-.customButton {
-    border-radius: 20px;
-    width: 200px;
-}
-hr {
-    color: #fff;
+    .description {
+      font-family: "Kanit-Light";
+      padding: 15px;
+      line-height: 1;
+      .customButton {
+        font-family: "Kanit-Medium";
+        color: #6268e9;
+        font-size: 18px;
+        border-radius: 20px;
+        width: 200px;
+        border: 2px solid #6268e9;
+      }
+    }
+    .contact {
+      .contact-group {
+        margin: 50px 50px 100px;
+        padding: 15px;
+        border-top: 1px solid;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .box-1,
+        .box-2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+        .box-2 {
+          text-align: center;
+        }
+        .box-3 {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: flex-end;
+          img {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
 }
 </style>
