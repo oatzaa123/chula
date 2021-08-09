@@ -115,7 +115,7 @@ export default {
             (rangeValue) => {
                 var value = ((rangeValue - 0) / (24 - 0)) * 100
                 state.rangeStyle = `background: linear-gradient(to right, #b51bff 0%, #b51bff ${value}%, #fff ${value}%, #fff 100%);`
-                if (rangeValue >= 12) {
+                if (rangeValue <= 12) {
                     state.isNight = false
                 } else {
                     state.isNight = true
