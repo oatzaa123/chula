@@ -30,8 +30,9 @@ export default {
 <style lang="scss" scoped>
 .default {
     padding: 1.5rem;
-    background-image: url('../assets/images/Rectangle 47.svg');
+    background-image: url('../assets/images/home/section1/Rectangle 47.png');
     min-height: 100vh;
+    background-size: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;

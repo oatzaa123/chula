@@ -96,7 +96,10 @@ export default {
             rgba(7, 4, 39, 0.96) 80%,
             rgb(7, 4, 39)
         ),
-        url('../../assets/images/home/footer/ve3X.png') no-repeat left top;
+        url('../../assets/images/home/footer/ve.svg') no-repeat left top;
+    // background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
     min-height: 135vh;
     position: relative;
     .footer-body {
