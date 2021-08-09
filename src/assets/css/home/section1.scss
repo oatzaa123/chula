@@ -7,6 +7,9 @@
     display: inline-block;
     &.bgnight {
       background-image: url("../../assets/images/Group 101@3X.png");
+      .star-group {
+        display: block;
+      }
     }
     .logo-block {
       width: 80%;
@@ -137,10 +140,9 @@
         animation: cloud 60s infinite linear;
       }
     }
-
     .star-group {
       position: absolute;
-
+      display: none;
       .blur,
       .star {
         position: absolute;
