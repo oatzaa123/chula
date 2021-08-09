@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <div class="animation-cloud"></div>
     <div class="section-1" :class="{ bgnight: isNight }">
       <div v-for="i in 7" :key="i" class="star-group">
         <div class="blur"></div>
@@ -41,17 +42,16 @@
           </router-link>
         </div>
       </div>
-      <div class="animation-cloud"></div>
     </div>
     <div class="sub-section1">
       <img
         :class="{ active: isNight }"
-        :src="require('../../assets/images/home/section1/L_DN2N_20202@1X.png')"
+        :src="require('../../assets/images/home/section1/L_DN2N_20202.png')"
         style="width: 100%"
       />
       <img
         :class="{ active: !isNight }"
-        :src="require('../../assets/images/home/section1/L_DN2_20202@1X.png')"
+        :src="require('../../assets/images/home/section1/L_DN2_20202.png')"
         style="width: 100%"
       />
     </div>
