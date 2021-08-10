@@ -46,7 +46,7 @@ const routes = [
                 name: 'Gallery',
                 component: () =>
                     import(
-                        /* webpackChunkName: "Gallery" */ '../pages/Gallery.vue'
+                        /* webpackChunkName: "Gallery" */ '../pages/gallery/Gallery.vue'
                     ),
             },
             {

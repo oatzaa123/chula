@@ -28,8 +28,10 @@ export default {
 <style lang="scss" scoped>
 .right {
     width: 35%;
-    line-height: 1.75;
-    font-size: 1rem;
+    line-height: 1.55;
+    font-family: 'Kanit-Medium';
+    font-size: 17px;
+    margin-top: 15px;
     opacity: 0;
     height: 0px;
     overflow: hidden;
