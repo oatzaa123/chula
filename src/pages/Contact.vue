@@ -32,9 +32,6 @@
         </div>
 
         <div class="icon-group">
-          <div>
-            <span style="color: white">&#10230;</span>
-          </div>
           <div v-for="(item, index) in icon" :key="index">
             <img class="contact-icon" :src="item.path" />
           </div>
