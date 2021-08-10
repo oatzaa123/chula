@@ -12,7 +12,7 @@
               <div class="title">CHULA</div>
               <div class="sub">DIGITAL ARTS PARK</div>
             </div>
-            <div class="toggle night">
+            <div class="toggle">
               <div class="day">DAY</div>
               <div class="n">&</div>
               <div class="night active">NIGHT</div>
@@ -32,6 +32,9 @@
         </div>
 
         <div class="icon-group">
+          <div>
+            <span style="color: white">&#10230;</span>
+          </div>
           <div v-for="(item, index) in icon" :key="index">
             <img class="contact-icon" :src="item.path" />
           </div>
@@ -42,21 +45,25 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { reactive, toRefs } from "vue";
 export default {
   setup() {
-    const icon = ref([
-      {
-        path: require("../assets/images/home/footer/Group 118@2X.png"),
-      },
-      {
-        path: require("../assets/images/home/footer/Group 117@2X.png"),
-      },
-      {
-        path: require("../assets/images/home/footer/Group 122@2X.png"),
-      },
-    ]);
-    return { icon };
+    const state = reactive({
+      isNight: true,
+      icon: [
+        {
+          path: require("../assets/images/home/footer/Group 118@2X.png"),
+        },
+        {
+          path: require("../assets/images/home/footer/Group 117@2X.png"),
+        },
+        {
+          path: require("../assets/images/home/footer/Group 122@2X.png"),
+        },
+      ],
+    });
+
+    return { ...toRefs(state) };
   },
 };
 </script>
